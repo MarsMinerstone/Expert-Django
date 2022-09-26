@@ -1,0 +1,393 @@
+{% load static %}
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with  v5.6.11, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="Home">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static 'assets/images/-80x37.png' %}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons2/mobirise2.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/parallax/jarallax.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu1 cid-thBzyqhMu9" once="menu" id="menu1-k">
+    
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="/">
+                        <img src="{% static 'assets/images/80x37.png' %}" alt="" style="height: 3.5rem;">
+                    </a>
+                </span>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="#features8-o">Направления обучения</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="/">Пакеты услуг</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="/">Оплата</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="/">Вопросы</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="/">Реквизиты</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-4" href="/">Новости</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section data-bs-version="5.1" class="header9 cid-thBzXH5WLy" id="header9-l">
+
+    
+
+    
+    
+
+    <div class="text-center container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-9">
+                <div class="image-wrap mb-4">
+                    <img src="{% static 'assets/images/loon-image-high-1080x558.jpg' %}" alt="">
+                </div>
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Лицензия</strong></h1>
+                <p class="mbr-text mbr-fonts-style display-4">Что-то про лицензию</p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="/">Посмотреть лицензию</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-bs-version="5.1" class="features7 cid-thBDtdATlO" id="features8-o">
+    <!---->
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 239, 0);">
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Направления обучения</strong></h5>
+                
+            </div>
+
+            {% for discipline in disciplines %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5">
+                            <strong>{{discipline.d_name}}</strong><strong><br></strong></h6>
+                        <p class="mbr-text cost mbr-fonts-style display-5">{{discipline.d_price}} р.</p>
+                    </div>
+                    <div class="bottom-line">
+                        <p class="mbr-text mbr-fonts-style display-7">{{discipline.d_description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+
+<section data-bs-version="5.1" class="content5 cid-ti3Nx6fo1R" id="content5-x">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-2">
+                    Расписание
+                </h4>
+                <p class="mbr-text mbr-fonts-style display-7"></p>
+                <p>08.10.2022 - Номенклатура дел (очно)</p>
+                <p>08.10.2022 - Номенклатура дел (очно)</p>
+                <p>08.10.2022 - Номенклатура дел (очно)</p>
+                <p>08.10.2022 - Номенклатура дел (очно)</p>
+                <p>08.10.2022 - Номенклатура дел (очно)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features7 cid-ti3mALlvVi" id="features8-q">
+    <!---->
+    
+
+    
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Формы оказания услуг</strong></h5>
+                
+            </div>
+
+            {% for service in services %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5"><strong>{{ service.s_name }}</strong></h6>
+                        <p class="mbr-text cost mbr-fonts-style display-5"></p>
+                    </div>
+                    <div class="bottom-line">
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features7 cid-ti3mCIHa4E" id="features8-r">
+    <!---->
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Виды обучения</strong></h5>
+                
+            </div>
+
+            {% for education in educations %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5">
+                            <strong>{{ education.e_name }}</strong></h6>
+                    </div>
+                    <div class="bottom-line">
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features7 cid-ti3mEXKXLT" id="features8-s">
+    <!---->
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Дополнительные услуги</strong></h5>
+                
+            </div>
+
+            {% for addition in additions %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5"><strong>{{ addition.a_name }}</strong></h6>
+                    </div>
+                    <div class="bottom-line">
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="clients1 cid-ti3mUPEYwF" id="clients1-u">
+    
+    <div class="images-container container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Партнеры</strong></h3>
+            
+            
+        </div>
+
+        <div class="row justify-content-center mt-4">
+
+            {% for partner in partners %}
+            <div class="col-md-3 card">
+                <img src="{{ partner.p_image.url }}" alt="">
+            </div>
+            {% endfor %}
+            
+        
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="contacts2 cid-ti3mY5CpDF mbr-parallax-background" id="contacts2-v">
+    <!---->
+    
+
+    
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(206, 191, 175);">
+    </div>
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Контакты</strong></h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5"><strong>Телефон</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="tel:+12345678910" class="text-primary">0 (800) 123 45 67</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5"><strong>Почта</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="mailto:info@site.com" class="text-primary">info@site.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                            <strong>Телефон</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            4100 Ross Street, Okawville, IL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont socicon-vkontakte socicon"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5"><strong>ВКонтакте</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">vk.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="contacts3 map1 cid-ti3n8mzrxW" id="contacts3-w">
+
+    
+
+    
+    
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Как нас найти</strong></h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5"><div><strong>Каменноостровский пр. 15</strong><br></div></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">От метро Горьков 3 минуты пешком</p>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-globe mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                            <strong>Email</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="mailto:info@site.com" class="text-primary">info@site.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper col-12 col-md-6">
+                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNveGQ9bfpKFwWzQLLftrR9hNiHwdqQG8&amp;q=Санкт петербург каменноост пр 15" allowfullscreen=""></iframe></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>  
+<script src="{% static 'assets/parallax/jarallax.js' %}"></script>  
+<script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>  
+<script src="{% static 'assets/ytplayer/index.js' %}"></script>  
+<script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>  
+{# <script src="{% static 'assets/theme/js/script.js' %}"></script>   #}
+  
+  
+</body>
+</html>
