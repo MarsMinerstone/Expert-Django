@@ -45,6 +45,14 @@ class Partner(models.Model):
 		return self.p_name
 
 
+class Mail(models.Model):
+	"""docstring for Mail"""
+	e_name = models.CharField(max_length=20, verbose_name='Имя')
+	email = models.EmailField(max_length=30)
+
+		
+
+
 # class Contacts(models.Model):
 # 	"""docstring for Contacrs"""
 # 	p_name = models.CharField(max_length=20, verbose_name='Наименование')

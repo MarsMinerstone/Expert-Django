@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'debug_toolbar',
+    # 'debug_toolbar',
+    # "sendemail.apps.SendemailConfig",
 ]
 
 MIDDLEWARE = [
@@ -50,8 +51,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+DEFAULT_FROM_EMAIL = "mastermars777@gmail.com"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ROOT_URLCONF = 'Expert.urls'
 
@@ -103,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-INTERNAL_IPS = [
-    '127.0.0.1'
-]
+# INTERNAL_IPS = [
+#     '127.0.0.1'
+# ]
 
 
 # Internationalization
