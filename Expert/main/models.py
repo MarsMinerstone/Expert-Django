@@ -50,13 +50,14 @@ class Mail(models.Model):
 	e_name = models.CharField(max_length=20, verbose_name='Имя')
 	email = models.EmailField(max_length=30)
 
-		
+	def __str__(self):
+		return f"{self.e_name} {self.email}"
 
 
-# class Contacts(models.Model):
-# 	"""docstring for Contacrs"""
-# 	p_name = models.CharField(max_length=20, verbose_name='Наименование')
-# 	p_image = models.ImageField(verbose_name='Лого')
-		
-# 	def __str__(self):
-# 		return self.p_name
+class Question(models.Model):
+	question = models.TextField(verbose_name="Вопрос")
+	answer = models.TextField(verbose_name="Ответ")
+	is_visible = models.BooleanField(verbose_name="Отображение")
+
+	def __str__(self):
+		return self.question

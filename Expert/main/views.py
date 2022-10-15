@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 import smtplib
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index2(request):
@@ -16,20 +17,23 @@ def index2(request):
 	return render(request, 'index.html', data)
 
 
+@csrf_exempt
 def index(request):
 	data = {'disciplines': Discipline.objects.all(), 
-			'services': Service.objects.all(), 
-			'educations': Education.objects.all(),
-			'additions': Addition.objects.all(), 
+			# 'services': Service.objects.all(), 
+			# 'educations': Education.objects.all(),
+			# 'additions': Addition.objects.all(), 
 			'partners': Partner.objects.all(),
-			'form': ContactForm()}
+			'form': ContactForm(),
+			'questions': Question.objects.filter(is_visible=True)}
 	if request.method == "GET":
 		form = ContactForm()
 	else:
 		form = ContactForm(request.POST)
 		if form.is_valid():
-			e_name = form.cleaned_data["e_name"]
-			email = form.cleaned_data["email"]
+			form.save()
+			# e_name = form.cleaned_data["e_name"]
+			# email = form.cleaned_data["email"]
 			# send_email_(f"{e_name}\n{email}")
 
 	return render(request, "index.html", data)
