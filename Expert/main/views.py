@@ -2,19 +2,17 @@ from main.models import *
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from .forms import ContactForm
+from .forms import *
 import smtplib
 from django.views.decorators.csrf import csrf_exempt
 
 
 def index2(request):
-	data = {'disciplines': Discipline.objects.all(), 
-			'services': Service.objects.all(), 
+	data = {'services': Service.objects.all(), 
 			'educations': Education.objects.all(),
-			'additions': Addition.objects.all(), 
-			'partners': Partner.objects.all()}
+			'additions': Addition.objects.all()}
 
-	return render(request, 'index.html', data)
+	return render(request, 'index1.2.html', data)
 
 
 @csrf_exempt
@@ -24,19 +22,20 @@ def index(request):
 			# 'educations': Education.objects.all(),
 			# 'additions': Addition.objects.all(), 
 			'partners': Partner.objects.all(),
-			'form': ContactForm(),
-			'questions': Question.objects.filter(is_visible=True)}
-	if request.method == "GET":
-		form = ContactForm()
-	else:
-		form = ContactForm(request.POST)
-		if form.is_valid():
-			form.save()
-			# e_name = form.cleaned_data["e_name"]
-			# email = form.cleaned_data["email"]
-			# send_email_(f"{e_name}\n{email}")
+			'c_form': ContactForm(),
+			"q_form": QuestionForm()}
+	
+	if request.method == "POST":
+		if "e_name" in request.POST:
+			form = ContactForm(request.POST)
+			if form.is_valid():
+				form.save()
+		elif "q_name" in request.POST:
+			form = QuestionForm(request.POST)
+			if form.is_valid():
+				form.save()
 
-	return render(request, "index.html", data)
+	return render(request, "index1.html", data)
 
 
 # def send_email_(namemail):

@@ -1,84 +1,6 @@
+{% extends 'wrapper.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html  >
-<head>
-  <!-- Site made with  v5.6.11, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.6.11, mobirise.com">
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="">
-  <meta property="og:image" content="">
-  <meta name="twitter:title" content="Home">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="{% static 'assets/images/logo.png' %}" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons2/mobirise2.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}"><link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
-  
-  
-  
-  
-</head>
-<body>
-  
-  <section data-bs-version="5.1" class="menu menu1 cid-tjcUPIZRyi" once="menu" id="menu1-k">
-    
-
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="#">
-                        <img src="{% static 'assets/images/logo.png' %}" alt="" style="height: 3rem;">
-                    </a>
-                </span>
-                
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#features8-r">
-                            Направления обучения</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#slider4-v">
-                            Подробнее об услугах</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#form4-q">
-                            Подать заявку</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#features17-s">
-                            Реквизиты</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#contacts2-n">
-                            Контакты</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#content17-o">
-                            Вопросы</a></li>
-                            <li class="nav-item"><a class="nav-link link text-black display-4" href="#">
-                            Новости</a></li>
-                </ul>
-                
-                
-            </div>
-        </div>
-    </nav>
-</section>
-
+{% block content %}
 <section data-bs-version="5.1" class="header9 cid-tjcUQUqpnb" id="header9-l">
 
     
@@ -113,7 +35,7 @@
                 
             </div>
 
-            {% for discipline in disciplines%}
+            {% for discipline in disciplines %}
             <div class="card col-12 col-md-6">
                 <div class="card-wrapper">
                     <div class="top-line">
@@ -194,7 +116,7 @@
                                 
                                 <p class="mbr-text mbr-fonts-style mt-3 display-7">Описание.<br></p>
                             </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Читать больше
+                            <div class="mbr-section-btn item-footer mt-2"><a href="dop/" class="btn btn-primary item-btn display-7" target="_blank">Читать больше
                                     &gt;</a></div>
                         </div>
                     </div>
@@ -234,7 +156,7 @@
                                 Заполните форму для подачи заявки на обучение.</p>
                         </div>
                 
-                <form method="post" class="mbr-form form-with-styler" data-form-title="Form Name">
+                <form method="post" class="mbr-form form-with-styler" data-form-title="Form Name" action="">
                     {% csrf_token %}
 
                     
@@ -244,11 +166,11 @@
 
                         <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="name">
                             
-                            {{ form.e_name }}
+                            {{ c_form.e_name }}
                         </div>
 
                         <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="email">
-                            {{ form.email }}
+                            {{ c_form.email }}
                         </div>
 
 
@@ -548,25 +470,25 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="fUglWWBAoB2TglxReNT4BKfuklW7UHt2vp1kjh0RV3ta+rRi0eSKQSrv1cYmlV5d/XajShRFg6nkew9XTrkQRIKYkw5JOd5vwfxr7xznoT7PvVn3zR5DwXA+q7+l/R1S">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Спасибо за вопрос, мы отправим вам ответ на почту.</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Произошла ошибка, попробуйте снова
-                        </div>
-                    </div>
+
+                <form method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
+                    {% csrf_token %}
                     <div class="dragArea row">
+
                         <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form5-u">
+                            {{ q_form.q_name }}
                         </div>
+
                         <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-u">
+                            {{ q_form.q_email }}
                         </div>
                         
                         <div class="col-12 form-group mb-3" data-for="textarea">
-                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form5-u"></textarea>
+                            {{ q_form.question }}
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-4">Send message</button></div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-4">Отправить</button></div>
+
                     </div>
                 </form>
             </div>
@@ -574,10 +496,6 @@
     </div>
 </section>
 
-<script src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>  <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>  <script src="{% static 'assets/ytplayer/index.js' %}"></script>  <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>  <script src="{% static 'assets/embla/embla.min.js' %}"></script>  <script src="{% static 'assets/embla/script.js' %}"></script>  <script src="{% static 'assets/mbr-switch-arrow/mbr-switch-arrow.js' %}"></script>  
-{# <script src="{% static 'assets/theme/js/script.js' %}"></script>   #}
-<script src="{% static 'assets/formoid/formoid.min.js' %}"></script>  
+
   
-  
-</body>
-</html>
+{% endblock %}

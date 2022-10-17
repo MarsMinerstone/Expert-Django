@@ -1,0 +1,112 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+
+
+<section data-bs-version="5.1" class="features7 cid-tjcVyJZXRF" id="features8-r">
+    <!---->
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Формы оказания услуг</strong>
+                </h5>
+                
+            </div>
+
+            {% for service in services %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5">
+                            <strong>{{service.s_name}}</strong>
+                        </h6>
+                    </div>
+                    <div class="bottom-line">
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            {{service.s_description}}
+                        </p>
+                    </div>
+                </div>
+            </div>    
+            {% endfor %}
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features7 cid-tjcVyJZXRF" id="features8-r">
+    <!---->
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Виды обучения</strong>
+                </h5>
+                
+            </div>
+
+            {% for education in educations %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5">
+                            <strong>{{education.e_name}}</strong>
+                        </h6>
+                    </div>
+                    
+                </div>
+            </div>    
+            {% endfor %}
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features7 cid-tjcVyJZXRF" id="features8-r">
+    <!---->
+    
+
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="title col-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                    <strong>Дополнительные услуги</strong>
+                </h5>
+                
+            </div>
+
+            {% for addition in additions %}
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="top-line">
+                        <h6 class="card-title mbr-fonts-style display-5">
+                            <strong>{{addition.a_name}}</strong>
+                        </h6>
+                    </div>
+                    
+                </div>
+            </div>    
+            {% endfor %}
+            
+            
+            
+        </div>
+    </div>
+</section>
+  
+{% endblock %}

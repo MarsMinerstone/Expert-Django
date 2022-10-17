@@ -55,9 +55,9 @@ class Mail(models.Model):
 
 
 class Question(models.Model):
+	q_name = models.CharField(max_length=20, verbose_name="Имя")
+	q_email = models.EmailField()
 	question = models.TextField(verbose_name="Вопрос")
-	answer = models.TextField(verbose_name="Ответ")
-	is_visible = models.BooleanField(verbose_name="Отображение")
 
 	def __str__(self):
-		return self.question
+		return self.q_name
